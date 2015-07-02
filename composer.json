@@ -1,0 +1,24 @@
+{
+    "name": "brookinsconsulting/bcimportcsv",
+    "description": "eZ Publish Legacy extension which provides a flexible solution providing a quick and simple import of content tree content objects content in csv format. Great for simple importing of customer content!",
+    "type": "ezpublish-legacy-extension",
+    "keywords": [ "eZ Publish", "content object", "import", "module view", "command line script" ],
+    "homepage": "https://bitbucket.org/brookinsconsulting/bcimportcsv",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name" : "Brookins Consulting",
+            "homepage": "http://brookinsconsulting.com",
+            "email": "info@brookinsconsulting.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.0.0",
+        "ezsystems/ezpublish-legacy-installer": "*"
+    },
+    "extra": {
+        "ezpublish-legacy-extension-name": "bcimportcsv"
+    }
+}

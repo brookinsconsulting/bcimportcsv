@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<software>
+    <metadata>
+        <name>BC Import CSV</name>
+        <version>0.1.1</version>
+        <copyright>Copyright (C) 1999 - 2016 Brookins Consulting and Think Creative</copyright>
+        <license>GNU General Public License</license>
+        <info_url>http://github.com/brookinsconsulting/bcimportcsv</info_url>
+    </metadata>
+</software>

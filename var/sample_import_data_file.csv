@@ -1,0 +1,4 @@
+requirement_id,title,item_part,port,import_requirements_type,requirements_description,country_identifier
+0,Test Commodity,Fruit,All Ports,Allowed,This commodity is allowed via all ports,Greece
+0,Demo,Nut,All Ports,Subject to Inspection,"This commodity is subject to inspection at the port of entry and all general requirements of <link target=""_blank"" href=""http://example.com/bla/bla/bla"">7 RDE 240.7-4</link>",England
+0,Commodity,,All Ports,Restricted,You cannot bring this commodity into the United States,France
