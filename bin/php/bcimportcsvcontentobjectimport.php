@@ -21,12 +21,14 @@ $srcStartTime = microtime( true );
 require 'autoload.php';
 
 /**
- * Disable memory and time limit
+ * Disable memory, time limit and enable line ending detection
  */
 
 set_time_limit( 0 );
 
 ini_set( "memory_limit", -1 );
+
+ini_set( "auto_detect_line_endings", 1 );
 
 /** Script startup and initialization **/
 
