@@ -180,7 +180,7 @@ $createDate = new eZDateTime();
 
 $csvArray = str_getcsv( $fpCsvString, "\n" );
 $csvArrayCount = count( $csvArray ) - 1;
-$progressPercentagePart = ( 100 / $csvArrayCount );
+$progressPercentagePart = ( 1 / $csvArrayCount ) * 100;
 $progressPercentage = $progressPercentagePart;
 $objectDataCount = 0;
 
@@ -530,7 +530,7 @@ while ( ( $objectData = fgetcsv( $fp, $csvLineLength, $csvImportDelimiter, $csvI
         }
 
         $objectDataCount = $objectDataCount +1;
-        $progressPercentage = $progressPercentagePart * $objectDataCount;
+        $progressPercentage = 100 * ( $objectDataCount / $csvArrayCount );
 } // end first while loop
 
 fclose( $fp );
@@ -540,7 +540,7 @@ unset( $node );
 unset( $class );
 unset( $foo );
 
-/** Update script moniter progress **/
+/** Update script moniter progress. Note that this script progress update is different than import accuracy tracking **/
 
 if ( $scheduledScript !== false )
 {
