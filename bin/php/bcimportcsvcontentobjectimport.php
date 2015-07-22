@@ -180,7 +180,8 @@ $createDate = new eZDateTime();
 
 $csvArray = str_getcsv( $fpCsvString, "\n" );
 $csvArrayCount = count( $csvArray ) - 1;
-$progressPercentage = ( 100 / $csvArrayCount );
+$progressPercentagePart = ( 100 / $csvArrayCount );
+$progressPercentage = $progressPercentagePart;
 $objectDataCount = 0;
 
 rewind( $fp );
@@ -529,7 +530,7 @@ while ( ( $objectData = fgetcsv( $fp, $csvLineLength, $csvImportDelimiter, $csvI
         }
 
         $objectDataCount = $objectDataCount +1;
-        $progressPercentage = $progressPercentage * $objectDataCount;
+        $progressPercentage = $progressPercentagePart * $objectDataCount;
 } // end first while loop
 
 fclose( $fp );
@@ -538,6 +539,13 @@ unset( $fp );
 unset( $node );
 unset( $class );
 unset( $foo );
+
+/** Update script moniter progress **/
+
+if ( $scheduledScript !== false )
+{
+    $scheduledScript->updateProgress( 100 );
+}
 
 /** Call for display of execution time **/
 
